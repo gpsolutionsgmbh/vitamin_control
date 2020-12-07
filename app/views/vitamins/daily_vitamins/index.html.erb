@@ -1,0 +1,4 @@
+<% @daily_vitamins.each do |daily_vitamin| %>
+  <p>Vitamin: <%= daily_vitamin.name %></p>
+  <p>Day: <%= daily_vitamin.created_at.strftime("%Y-%m-%d") %></p>
+<% end %>

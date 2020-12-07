@@ -1,0 +1,10 @@
+<%= render 'shared/vitamin_links' %>
+<br>
+Current Level: <%= @daily_vitamin.total %>
+<br>
+Activities:
+<%= render partial: 'activity', collection: @daily_vitamin.activities, as: :activity %>
+<br>
+<br>
+Food Intakes:
+<%= render partial: 'food_intake', collection: @daily_vitamin.food_intakes, as: :food_intake %>

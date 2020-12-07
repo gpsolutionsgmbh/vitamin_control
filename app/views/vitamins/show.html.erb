@@ -1,0 +1,19 @@
+<%= render 'shared/vitamin_links' %>
+<% if @daily_vitamins.present? %>
+  <table>
+    <thead>
+      <th>Vitamin</th>
+      <th>Day</th>
+      <th>Current Level</th>
+    </thead>
+    <tbody>
+      <% @daily_vitamins.each do |daily_vitamin| %>
+        <tr>
+          <td><%= link_to @vitamin.name, vitamin_daily_vitamin_path(@vitamin, daily_vitamin) %></td>
+          <td><%= daily_vitamin.created_at.strftime("%Y-%m-%d") %></td>
+          <td><%= daily_vitamin.total %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
